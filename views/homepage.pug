@@ -13,3 +13,22 @@
 //-                 .card 
 //-                     h2.card__name #{contact.properties.firstname}  #{contact.properties.lastname}
 //-                     p.card__email #{contact.properties.email}
+doctype html
+html
+  head
+    title Universities | HubSpot API Integration
+  body
+    a(href="/update-cobj") Add a New University
+    h1 List of Universities
+    table(border="1")
+      tr
+        th University Name
+        th City
+        th State
+        th Number of Students
+      each record in records
+        tr
+          td= record.properties.name
+          td= record.properties.city
+          td= record.properties.state
+          td= record.properties.number_of_students
